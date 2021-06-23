@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro sitio web</title>
+</head>
+
+<body>
+    <div>
+
+        <a href="{{url_for('pagina1')}}">Pagina1</a>
+        <a href="{{url_for('pagina2')}}">Pagina2</a>
+        <a href="{{url_for('static',filename='andro.jpg')}}">Foto</a>
+        <a href="{{url_for('formulario')}}">Formulario</a>
+        <a href="{{url_for('formulario2')}}">Formulario2</a>
+    </div>
+    <br>
+    <hr>
+    <br>
+
+    {%block contenido%}
+
+    <h1> Pagina Principal</h1>
+    
+    {%endblock%}
+    <br>
+    <hr>
+    <br>
+
+    <h5>Pie de pagina</h5>
+
+</body>
+
+</html>

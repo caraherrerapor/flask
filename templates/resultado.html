@@ -1,0 +1,31 @@
+{%extends "basico.html"%}
+
+
+
+{%block contenido %}
+
+<h3> Resultado Validacion</h3>
+
+{%if todo%}
+<p>El nombre es valido</p>
+{%else %}
+<ul>
+    {%if not minusculas%}
+    <li> el nombre no tiene minusculas</li>
+    {%endif%}
+
+    {%if not mayuscula%}
+    <li> el nombre no empieza por mayuscula</li>
+    {%endif%}
+
+    {%if not alfanum%}
+    <li> el nombre no tiene numero</li>
+    {%endif%}
+
+
+</ul>
+{%endif%}
+
+<a href="{{url_for('basico')}}">Volver pagina principal</a>
+
+{%endblock%}
